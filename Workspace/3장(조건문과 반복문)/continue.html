@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue 예제</title>
+</head>
+<body>
+    <script>
+        // 내 방식(나는 continue를 사용 안했다...!)
+        // 2의 배수를 제외하고 다 출력하게끔 하는 코드
+        for(var i=1;i<=100;i++){
+            if(i%2==1){
+                document.write(i+"<br>");
+            }
+        }
+        
+        
+
+        // 강사님 방식
+        // 2의 배수를 제외하고 다 출력하게끔 하는 코드
+        for(var i=1;i<=100;i++){
+            // 2의 배수인지 확인하는 코드
+            if(i%2==0){
+                // continue를 실행하게 되면 continue 아래에 있는 실행코드를 무시하고 바로 증감식으로 이동한다.
+                continue; 
+            }
+            document.write(i+"<br>");
+        }
+        
+        document.write("------------------------------------------------------------------------------");
+        
+        //ex) 1에서 100까지의 숫자 중 2와 3의 공배수를 제외한 숫자를 출력하시오.
+        for(var i=1; i<=100; i++){
+            if(i%2==0 && i%3==0){
+                continue;
+            }
+            document.write(i+"<br>");
+        }
+    </script>
+</body>
+</html>
